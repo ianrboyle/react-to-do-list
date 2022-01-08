@@ -1,11 +1,9 @@
 import React from "react";
 
-function Items() {
+function Items(props) {
   return (
     <div>
-      <ul>
-        <li>A Item </li>
-      </ul>
+      <li>{props.text}</li>
     </div>
   );
 }

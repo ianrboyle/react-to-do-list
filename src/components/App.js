@@ -8,7 +8,6 @@ function App() {
     <div className="container">
       <Heading />
       <Form />
-      <Items />
     </div>
   );
 }
