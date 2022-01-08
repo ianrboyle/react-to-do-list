@@ -3,11 +3,9 @@ import React, { useState } from "react";
 function Items(props) {
   const [taskCompleted, setTaskCompleted] = useState(false);
   function strikeThrough() {
-    if (taskCompleted === false) {
-      setTaskCompleted(true);
-    } else {
-      setTaskCompleted(false);
-    }
+    setTaskCompleted((prevValue) => {
+      return !prevValue;
+    });
   }
   function unStrike() {
     setTaskCompleted(false);
