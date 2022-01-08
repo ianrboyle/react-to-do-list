@@ -14,7 +14,14 @@ function Form() {
       return [...prevItems, inputText];
     });
   }
-
+  function deleteItem(id) {
+    console.log("trying to dlete");
+    setItems((prevItems) => {
+      return prevItems.filter((item, index) => {
+        return index !== id;
+      });
+    });
+  }
   return (
     <div>
       <div className="form">
@@ -25,8 +32,8 @@ function Form() {
       </div>
       <div>
         <ul>
-          {items.map((todoItem) => (
-            <Items text={todoItem} />
+          {items.map((todoItem, index) => (
+            <Items key={index} id={index} text={todoItem} completed={deleteItem} />
           ))}
         </ul>
       </div>

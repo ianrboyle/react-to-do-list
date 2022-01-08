@@ -1,19 +1,14 @@
 import React, { useState } from "react";
 
 function Items(props) {
-  const [taskCompleted, setTaskCompleted] = useState(false);
-  function strikeThrough() {
-    setTaskCompleted((prevValue) => {
-      return !prevValue;
-    });
-  }
-  function unStrike() {
-    setTaskCompleted(false);
-  }
   return (
-    <div>
-      <li onClick={strikeThrough} style={{ textDecoration: taskCompleted ? "line-through" : null }}>
-        {props.text}
+    <div
+      onClick={() => {
+        props.completed(props.id);
+      }}
+    >
+      <li>
+        {props.text} | <button>Task Complete</button>
       </li>
     </div>
   );
