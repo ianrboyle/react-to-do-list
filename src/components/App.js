@@ -1,11 +1,10 @@
 import React from "react";
+import Heading from "./Heading";
 
 function App() {
   return (
     <div className="container">
-      <div className="heading">
-        <h1>To-Do List</h1>
-      </div>
+      <Heading />
       <div className="form">
         <input type="text" />
         <button>
