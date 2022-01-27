@@ -8,8 +8,12 @@ const style = {
   outline: "none",
 };
 
-const CalculatorSquare = ({ value }) => {
-  return <button style={style}>{value}</button>;
+const CalculatorSquare = ({ value, onClick }) => {
+  return (
+    <button onClick={onClick} style={style}>
+      {value}
+    </button>
+  );
 };
 
 export default CalculatorSquare;

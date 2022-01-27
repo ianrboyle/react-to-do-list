@@ -9,11 +9,11 @@ const style = {
   display: "grid",
   gridTemplate: "repeat(4, 1fr) / repeat(3, 1fr)",
 };
-const Grid = ({ squares }) => {
+const Grid = ({ squares, onClick }) => {
   return (
     <div style={style}>
       {squares.map((square, i) => {
-        return <CalculatorSquare key={i} value={square} />;
+        return <CalculatorSquare key={i} value={square} onClick={() => onClick(i)} />;
       })}
     </div>
   );
