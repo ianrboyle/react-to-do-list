@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./components/App";
-
-ReactDOM.render(<App />, document.getElementById("root"));
+import Weather from "./components/Weather";
+ReactDOM.render(<Weather />, document.getElementById("root"));
 
 //CHALLENGE: Make this app work by applying what you've learnt.
 //1. When new text is written into the input, its state should be saved.
